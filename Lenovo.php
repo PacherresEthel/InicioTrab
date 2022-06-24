@@ -63,7 +63,8 @@ require_once 'iniciosesion.php';
             JOIN prod_marca ON producto.id_Producto = prod_marca.id_Producto 
             JOIN marca ON marca.Id_Marca = prod_marca.Id_Marca 
             JOIN precio ON precio.id_Precio = producto.id_Precio
-            WHERE marca.Nombre='Lenovo'";
+            WHERE marca.Nombre='Lenovo'
+            ORDER BY stock DESC";
             $result = mysqli_query($db, $consult);
             $product = mysqli_fetch_array($result);
             $c = 1;
@@ -74,7 +75,7 @@ require_once 'iniciosesion.php';
             <div class = "col-xs-9 col-sm-5 col-md-4 product">
                 <div class = "card">
                   <div class = "text-centrado">
-                    <img src="imagenes/lenovo <?php echo $c; ?>.jpg" alt ="Imagen Producto <?php echo $c; ?>">
+                    <img src="imagenes/lenovo <?php echo echo $product['id_Producto']; ?>.jpg" alt ="Imagen Producto <?php echo echo $product['id_Producto']; ?>">
                     <h5 > <?php echo $product['Prod_Nombre']; ?> </h5>
 
                     <div class="container mt-5">
