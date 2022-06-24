@@ -1,7 +1,9 @@
 <?php 
 require_once 'conexion.php';
 require_once 'header.php';
-$query= "SELECT * FROM producto WHERE Prod_Nombre LIKE '%".$_POST['busqueda']."%'";
+require_once 'iniciosesion.php';
+$query= "SELECT * FROM producto JOIN precio ON precio.id_Precio = producto.id_Precio 
+        WHERE Prod_Nombre LIKE '%".$_POST['busqueda']."%'";
 $result = mysqli_query($db, $query);
 $row = mysqli_fetch_array($result);
 ?>
@@ -9,6 +11,8 @@ $row = mysqli_fetch_array($result);
   <thead>
     <tr>
       <td>Nombre</td>
+      <td>Stock disponible</td>
+      <td>Precio</td>
       <td>Añadir</td>
     </tr>
   </thead>
@@ -23,8 +27,17 @@ $row = mysqli_fetch_array($result);
             echo $row['Prod_Nombre'];
         echo '</a>';'</td>';
         echo '<td>';
-        echo '<a href="">Añadir al carrito';
-        echo '</a>';'</td>';
+            echo $row['stock'];
+        echo '</td>';
+        echo '<td>';
+            echo $row['Prec_Precio'];
+        echo '</td>';
+        echo '<td>';
+            if($row['stock'] != 0){
+            echo '<a href="add_to_cart.php?id= '.$row['id_Producto'].'">Añadir al carrito';
+            echo '</a>';
+            }
+        echo '</td>';
         echo '</tr>';
     }
 }

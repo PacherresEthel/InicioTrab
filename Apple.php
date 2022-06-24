@@ -86,7 +86,7 @@ require_once 'iniciosesion.php';
                              S/. <?php echo number_format($product['Prec_Precio'], 2, '.', ','); ?>
                             </div>
                             <?php 
-                            if ($idusu != NULL){
+                            if ($idusu != NULL && $product['stock'] = 0){
                             ?>
                             <a href = "add_to_cart.php?id= <?php echo $product['id_Producto']; ?>"
                              class = "boton-ad-car"> Añadir al carrito </a>

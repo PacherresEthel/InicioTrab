@@ -32,7 +32,7 @@
               <a href="cerrar.php"> Cerrar Sesión </a>
             </li>
             <li>
-              <a href="historial.php"> Historial </a>
+              <a href="historial.php?idusu=<?php echo $idusu; ?>"> Historial </a>
             </li>
             <li>
               <a href="cart.php?idusu=<?php echo $idusu; ?>"> Carrito de compras </a>
