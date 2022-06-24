@@ -20,7 +20,7 @@
           </thead>
         <tbody>
           <?php
-
+          if(isset($_SESSION)){
           foreach ($_SESSION["cart"] as $key => $value) {
             $sql = "SELECT * FROM producto JOIN precio ON precio.id_Precio = producto.id_Precio WHERE id_Producto = ".$key;
             $result = mysqli_query($db, $sql);
@@ -41,7 +41,7 @@
               echo '</td>';
             echo '</tr>';
           }
-
+          }
 
           ?>
         </tbody>
