@@ -35,7 +35,7 @@
               <a href="historial.php"> Historial </a>
             </li>
             <li>
-              <a href="carrito.php"> Carrito de compras </a>
+              <a href="cart.php?idusu=<?php echo $idusu; ?>"> Carrito de compras </a>
             </li>
             <li>
               <a href="portada2.php?idusu=<?php echo $idusu; ?>"> <?php $name = $row['CI_Nombre']; echo $name; ?> </a>

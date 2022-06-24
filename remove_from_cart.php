@@ -1,4 +1,5 @@
 <?php
+require_once 'iniciosesion.php';
 session_start();
 
 if(isset($_SESSION["cart"][$_GET["id"]])){
@@ -12,6 +13,6 @@ if(isset($_SESSION["cart"][$_GET["id"]])){
   }
 }
 $_SESSION["alert"] = 'Producto eliminado del carrito correctamente. ';
-header("location: indexC.php")
+header("location:cart.php?idusu=".$idusu)
 
  ?>

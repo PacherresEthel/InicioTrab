@@ -22,9 +22,6 @@ require_once 'iniciosesion.php';
     <nav id="menu">
       <div class = "box">
           <ul>
-            <li>
-              <a href="carrito.php"> Carrito de compras </a>
-            </li>
             <?php
               if($idusu == NULL){
             ?>
@@ -37,6 +34,9 @@ require_once 'iniciosesion.php';
             <?php
               }else{
             ?>
+            <li>
+              <a href="cart.php?idusu=<?php echo $idusu; ?>"> Carrito de compras </a>
+            </li>
             <li>
               <a href="portada2.php?idusu=<?php echo $idusu; ?>"> <?php $name = $row['CI_Nombre']; echo $name; ?> </a>
             </li>
@@ -88,7 +88,7 @@ require_once 'iniciosesion.php';
                             <?php 
                             if ($idusu != NULL){
                             ?>
-                            <a href = "carrito.php"
+                            <a href = "add_to_cart.php?id= <?php echo $product['id_Producto']; ?>"
                              class = "boton-ad-car"> Añadir al carrito </a>
                             <?php
                             }

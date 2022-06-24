@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include('conexion.php');
 $header_html = '<html>
     <head>
         <title>SIN - 2022-I</title>
@@ -11,7 +11,7 @@ $header_html = '<html>
     <body>';
     if(isset($_SESSION["user_connected_id"])){
       $sql = "SELECT * FROM cliente where id_Cliente = '".$_SESSION["user_connected_id"]."'";
-      $result = mysqli_query($con, $sql);
+      $result = mysqli_query($db, $sql);
       $user = mysqli_fetch_array($result);
       echo "Hola:  ". $user['CI_Nombre'];
       echo "&nbsp; ";
@@ -21,7 +21,7 @@ $header_html = '<html>
     }
 
     if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
-      echo "&nbsp; | &nbsp; <a href='http://localhost/www/cart.php'><span class='badge bg-secondary'>".count($_SESSION["cart"])."</span>&nbsp;Ir al carrito</a>";
+      echo "&nbsp; | &nbsp;><span class='badge bg-secondary'>".count($_SESSION["cart"])."</span>&nbsp;</a>";
     }
 $footer_html ='</body>
   </html>';
