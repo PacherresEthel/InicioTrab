@@ -15,7 +15,7 @@ require_once 'iniciosesion.php';
     <meta charset="utf-8" />
     <meta name= "viewport" content="width=device-width, initial-scale=1"/>
     <!-- Agregar titulo -->
-    <title> ES | Xiaomi </title>
+    <title> ES | HP </title>
     </head>
   <body>
     <header>
