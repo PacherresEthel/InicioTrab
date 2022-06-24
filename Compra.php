@@ -1,3 +1,6 @@
+<?php require_once 'conexion.php';
+      require_once 'iniciosesion.php';
+?>
 <!DOCTYPE HTML>
 <HTML lang="es">
   <head>
@@ -9,9 +12,7 @@
   </head>
   <body style="background-color:#08E7EE;">
 
-<?php require_once 'compra.php';
-      require_once 'iniciosesion.php';
-?>
+
       <!--Cabecera -->
       <header id="cabecera">
         <div id="logo">
@@ -59,13 +60,13 @@
                                 <label >
                                     <H2>Nombre del dueño de la tarjeta</H2>
                                 </label>
-                                <input value="Marco Martínez" class="form-control" name="name" id="name"  type="text" >
+                                <input value="" class="form-control" name="name" id="name"  type="text" >
                             </div>
                             <div class="col-md-6">
                                     <label>
                                     <H2>Número de tarjeta</H2>
                                     </label>
-                                    <input value="1234567891234567" name="card" id="card" class="form-control"   type="text" maxlength="16" >
+                                    <input value="" name="card" id="card" class="form-control"   type="text" maxlength="16" >
                             </div>
                         </div>
 
@@ -74,15 +75,15 @@
                                     <label>
                                     <H2>CVV</H2>
                                     </label>
-                                    <input value="425" class="form-control"  type="text" maxlength="3" >
+                                    <input value="" class="form-control"  type="text" maxlength="3" >
                                 </div>
                                 <div class="col-md-6">
                                         <label>
                                         <H2>Fecha de expiración (MM/AAAA)</H2>
                                         </label>
                                         <div>
-                                            <input style="width:50px; display:inline-block" value="05" class="form-control"  type="text" maxlength="2" >
-                                            <input style="width:50px; display:inline-block" value="2026" class="form-control"  type="text" maxlength="4" >
+                                            <input style="width:50px; display:inline-block" value="" class="form-control"  type="text" maxlength="2" >
+                                            <input style="width:50px; display:inline-block" value="" class="form-control"  type="text" maxlength="4" >
 
                                         </div>
                                 </div>
@@ -90,15 +91,11 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <label><H2><span>Email</span></H2></label>
-                                <input class="form-control" type="text" name="email" id="email" maxlength="200" value="marco.martinez@marco.martinez.com">
-                            </div>
-                            <div class="col-md-4">
-                                <label><H2>Concepto</H2></label>
-                                <input class="form-control" type="text" name="description" id="description" maxlength="100" value="Apple MacBook M1 256GB 8GB Plata">
+                                <input class="form-control" type="text" name="email" id="email" maxlength="200" value="">
                             </div>
                             <div class="col-md-4">
                                 <label><H2>Monto</H2></label>
-                                <input class="form-control" type="number" name="total" id="total" value="2780">
+                                <input class="form-control" type="number" name="total" id="total" value="">
                             </div>
                         
                         </div>
