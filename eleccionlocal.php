@@ -68,98 +68,33 @@
       
       <th scope="col">Elegir</th>
     </tr>
-  </thead>
+  </thead>  
   <tbody>
+  <?php
+            $consult = "SELECT * FROM locales";
+            $result = mysqli_query($db, $consult);
+            $local = mysqli_fetch_array($result);
+            $c = 1;
+
+            if ($result = mysqli_query($db, $consult)) {
+                while ($local = mysqli_fetch_array($result)) {
+            ?>
     <tr>
-      <th scope="row">Cosmopolito</th>
-      <td>Av. Pacherres 145</td>
-      <td>20009</td>
+      <th scope="row"><?php echo $local['Loc_Nombre']; ?>
+</th>
+      <td><?php echo $local['Loc_Direccion']; ?>
+</td>
+      <td><?php echo $local['Loc_CodPostal']; ?>
+</td>
 
       <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
       
       <td>BTON</td>
+      <?php
+            $c = $c + 1;
+                }
+            }
+            ?>
     </tr>
-    <tr>
-      <th scope="row">Wandito</th>
-      <td>C. los tallanes 169 Urb. El Chipe</td>
-      <td>3000</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Coolwax</th>
-      <td>C. los geronimos 350</td>
-      <td>20004</td>
-      
-       <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-       <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Perritec</th>
-      <td>C. los perritos bandidos</td>
-      <td>20001</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Tecfuture</th>
-      <td>C. los futuristas 540</td>
-      <td>20007</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Pololitosmart</th>
-      <td>Av. Los proceseres de la independencia 700</td>
-      <td>30009</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Lolitosinovation</th>
-      <td>Av. Los youtubers 153</td>
-      <td>20001</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Valuable</th>
-      <td>C. los terneritos 214</td>
-      <td>5005</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Sagastrike</th>
-      <td>C. watuter aliancista 754</td>
-      <td>20000</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-    <tr>
-      <th scope="row">Jeronimato</th>
-      <td>Av. Sanchez de acero 682</td>
-      <td>1794</td>
-
-      <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
-      
-      <td>BTON</td>
-    </tr>
-
   </tbody>
 </table>
