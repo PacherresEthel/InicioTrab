@@ -82,9 +82,12 @@ require_once 'iniciosesion.php';
                      <div class="row">
                         <div class="col-sm-6">
                           <div class="row">
-                            <div class="col-sm-8">Precio</div>
-                            <div class="moneda">
-                             S/. <?php echo number_format($product['Prec_Precio'], 2, '.', ','); ?>
+                            <div class="col-sm-8">Precio: </div>
+                            <div>
+                            S/. <?php echo number_format($product['Prec_Precio'], 2, '.', ','); ?>
+                            </div>
+                            <div>
+                             Stock: <?php echo $product['stock'] ?>
                             </div>
                             <?php 
                             if ($idusu != NULL && $product['stock'] != 0){
