@@ -11,7 +11,8 @@
     <meta name= "viewport" content="width=device-width, initial-scale=1"/>
     <!-- Agregar titulo -->
     <title> ElectroShop </title>
-    <link rel="stylesheet" type="text/css" href="estilos.css"
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   </head>
   
   <body style="background-color:#08E7EE;">
@@ -19,24 +20,21 @@
 <?php require_once 'index.php';?>
       <!--Cabecera -->
       <header id="cabecera">
-        <div id="logo">
-          <a href="index.php">
-            <h1> ElectroShop </h1>
-          </a>
-        </div>
-        <!--/Menu -->
-        <nav id="menu">
-        <br/>
-        <br/>
-          <ul>
-            <li>
-              <a href="sesion.php"> Iniciar Sesión </a>
+         <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">ELECTROSHOP </a>
             </li>
-            <li>
-              <a href="index.php"> Inicio </a>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="index.php">INICIO</a>
             </li>
-          </ul>
-        </nav>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="sesion.php">INICIAR SESION</a>
+            </li>
+        </ul>
+    </nav>
+</body>
 
         <!--/Productos -->
         <nav id="productos">
