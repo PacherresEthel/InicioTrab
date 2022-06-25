@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="estcarrito.css">
         <header id="cabecera">
         <div id="logo">
-          <a href="index.php">
+          <a href="portada2.php?idusu=<?php echo $idusu; ?>">
             <h1> ElectroShop </h1>
           </a>
         </div>
