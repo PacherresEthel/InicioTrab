@@ -6,15 +6,31 @@
        echo $header_html;
         ?>
         <div class="container-fluid p-5 bg-primary text-white text-center">
-          <h1>Carrito de compras</h1>
-          <p>Esta es la lista de productos agregados al carrito</p>
+        <link rel="stylesheet" type="text/css" href="estcarrito.css">
+        <header id="cabecera">
+        <div id="logo">
+          <a href="index.php">
+            <h1> ElectroShop </h1>
+          </a>
+        </div>
+        <!--/Menu -->
+        <nav id="menu">
+        <br/>
+        <br/>
+          <ul>
+            <li>
+              <a href="portada2.php?idusu=<?php echo $idusu; ?>"> Regresar </a>
+            </li>
+          </ul>
+        </nav>
+          <h1>CARRITO DE COMPRAS</h1>
         </div>
         <table class="table">
           <thead>
-            <tr>
-              <td>Producto</td>
-              <td>Cantidad</td>
-              <td>Precio Unitario</td>
+            <tr >
+              <td><H3>Producto</H3></td>
+              <td><H4>Cantidad</H4></td>
+              <td><H4>Precio Unitario</H4></td>
               <td>&nbsp;</td>
             </tr>
           </thead>

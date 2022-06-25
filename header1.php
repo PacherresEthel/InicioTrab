@@ -13,16 +13,8 @@ $header_html = '<html>
       $sql = "SELECT * FROM cliente where id_Cliente = '".$_SESSION["user_connected_id"]."'";
       $result = mysqli_query($db, $sql);
       $user = mysqli_fetch_array($result);
-      echo "Hola:  ". $user['CI_Nombre'];
-      echo "&nbsp; ";
-      echo "<a href='http://localhost/www/logout.php'>Cerrar sesión</a>";
-    }else{
-      echo "<a href='http://localhost/www/login.php'>Ingresar</a>";
-    }
+      echo "&nbsp; ";}
 
-    if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
-      echo "&nbsp; | &nbsp;><span class='badge bg-secondary'>".count($_SESSION["cart"])."</span>&nbsp;</a>";
-    }
 $footer_html ='</body>
   </html>';
 ?>
