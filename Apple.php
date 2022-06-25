@@ -75,7 +75,7 @@ require_once 'iniciosesion.php';
             <div class = "col-xs-9 col-sm-5 col-md-4 product">
                 <div class = "card">
                   <div class = "text-centrado">
-                    <img src="imagenes/apple <?php echo echo $product['id_Producto']; ?>.jpg" alt ="Imagen Producto <?php echo echo $product['id_Producto']; ?>">
+                    <img src="imagenes/apple <?php echo $product['id_Producto']; ?>.jpg" alt ="Imagen Producto <?php echo $product['id_Producto']; ?>">
                     <h5 > <?php echo $product['Prod_Nombre']; ?> </h5>
 
                     <div class="container mt-5">
@@ -87,7 +87,7 @@ require_once 'iniciosesion.php';
                              S/. <?php echo number_format($product['Prec_Precio'], 2, '.', ','); ?>
                             </div>
                             <?php 
-                            if ($idusu != NULL && $product['stock'] = 0){
+                            if ($idusu != NULL && $product['stock'] != 0){
                             ?>
                             <a href = "add_to_cart.php?id= <?php echo $product['id_Producto']; ?>"
                              class = "boton-ad-car"> Añadir al carrito </a>
