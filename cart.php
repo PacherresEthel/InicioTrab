@@ -67,7 +67,7 @@
         <?php
         if($counter != 0) {
         ?>
-        <a href = "Compra.php?idusu=<?php echo $idusu; ?>"><button type="button" class="btn btn-success">Ir a pagar</button></a>
+        <a href = "eleccionlocal.php?idusu=<?php echo $idusu; ?>"><button type="button" class="btn btn-success">Ir a pagar</button></a>
         <?php } ?>
         <a href="javascript:history.back(1)"><button type="button" class="btn btn-info">Volver</button></a>
         <?php echo $footer_html; ?>
