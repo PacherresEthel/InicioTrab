@@ -20,6 +20,7 @@
           </thead>
         <tbody>
           <?php
+          $counter = 0;
           if(isset($_SESSION)){
           foreach ($_SESSION["cart"] as $key => $value) {
             $sql = "SELECT * FROM producto JOIN precio ON precio.id_Precio = producto.id_Precio WHERE id_Producto = ".$key;
@@ -40,10 +41,17 @@
                 echo '<a href="remove_from_cart.php?remove_all=1&id='.$key.'&idusu='.$idusu.'">Eliminar</a>';
               echo '</td>';
             echo '</tr>';
+            $counter++;
           }
           }
 
           ?>
         </tbody>
         </table>
+        <?php
+        if($counter != 0) {
+        ?>
+        <a href = "Compra.php?idusu=<?php echo $idusu; ?>"><button type="button" class="btn btn-success">Ir a pagar</button></a>
+        <?php } ?>
+        <a href="javascript:history.back(1)"><button type="button" class="btn btn-info">Volver</button></a>
         <?php echo $footer_html; ?>
