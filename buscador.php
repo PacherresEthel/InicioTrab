@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($result);
     while($row = mysqli_fetch_array($result)){
         echo '<tr>';
         echo '<td>';
-            echo '<a class="text-black text-decoration-none" href="detalle_producto.php?idproducto='.$row['Prod_Nombre'].'">';
+            echo '<a class="text-black text-decoration-none" href="showproducto.php?idproducto='.$row['id_Producto'].'&idusu='.$idusu.'">';
             echo $row['Prod_Nombre'];
         echo '</a>';'</td>';
         echo '<td>';

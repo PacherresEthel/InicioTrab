@@ -45,7 +45,7 @@
         <div id= "buscador" class="bloque" >
           <h3> </h3>
           <center>
-          <form action= "buscador.php" method="POST">
+          <form action= "buscador.php?idusu=<?php echo $idusu; ?>" method="POST">
             <input type= "text" name= "busqueda" />
             <input type= "submit" value= "Buscar" />
           </form>
