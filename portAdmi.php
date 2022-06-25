@@ -31,13 +31,13 @@
               <a href="cerrar.php"> Cerrar Sesión </a>
             </li>
             <li>
-              <a href="locales.php"> Locales </a>
+              <a href="localesAdmi.php"> Locales </a>
             </li>
             <li>
               <a href="clientes.php"> Clientes </a>
             </li>
             <li>
-              <a href="index.php"> Inicio </a>
+              <a href="index.php"> Valeria </a>
             </li>
           </ul>
         </nav>
