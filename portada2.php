@@ -11,45 +11,35 @@
     <meta name= "viewport" content="width=device-width, initial-scale=1"/>
     <!-- Agregar titulo -->
     <title> ElectroShop </title>
-    <link rel="stylesheet" type="text/css" href="estilos.css"
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
   </head>
   <body style="background-color:#08E7EE;">
 
 <?php require_once 'portada2.php';?>
       <!--Cabecera -->
       <header id="cabecera">
-        <div id="logo">
-            <a href="portada2.php?idusu=<?php echo $idusu; ?>">
-            <h1> ElectroShop </h1>
-          </a>
-        </div>
-        <!--/Menu -->
-        <br/>
-        <br/>
-        <nav id="menu">
-          <ul>
-            <li>
-              <a href="cerrar.php"> Cerrar Sesión </a>
+       <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="">ELECTROSHOP </a>
             </li>
-            <li>
-              <a href="historial.php?idusu=<?php echo $idusu; ?>"> Historial </a>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="cerrar.php">CERRAR SESION</a>
             </li>
-            <li>
-              <a href="cart.php?idusu=<?php echo $idusu; ?>"> Carrito de compras </a>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="historial.php?idusu=<?php echo $idusu; ?>">HISTORIAL</a>
             </li>
-            <li>
-              <a href="portada2.php?idusu=<?php echo $idusu; ?>"> <?php $name = $row['CI_Nombre']; echo $name; ?> </a>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="cart.php?idusu=<?php echo $idusu; ?>">CARRITO DE COMPRAS</a>
             </li>
-          </ul>
-        </nav>
-        <div id= "buscador" class="bloque" >
-          <h3> </h3>
-          <center>
-          <form action= "buscador.php?idusu=<?php echo $idusu; ?>" method="POST">
-            <input type= "text" name= "busqueda" />
-            <input type= "submit" value= "Buscar" />
-          </form>
-          </center>
+            <li class="nav-item">
+                <a class="nav-link" align-rigth href="portada2.php?idusu=<?php echo $idusu; ?>"> <?php $name = $row['CI_Nombre']; echo $name; ?></a>
+            </li>
+        </ul>
+    </nav>
+</body>
 
         <!--/Productos -->
         <nav id="productos">
