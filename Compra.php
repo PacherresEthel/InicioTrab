@@ -8,7 +8,7 @@
     <meta name= "viewport" content="width=device-width, initial-scale=1"/>
     <!-- Agregar titulo -->
     <title> ElectroShop </title>
-    <link rel="stylesheet" type="text/css" href="estilos.css"
+    <link rel="stylesheet" type="text/css" href="estilos.css">
   </head>
   <body style="background-color:#08E7EE;">
 
@@ -29,10 +29,10 @@
               <a href="cerrar.php"> Cerrar Sesión </a>
             </li>
             <li>
-              <a href="historial.php"> Historial </a>
+              <a href="historial.php?idusu=<?php echo $idusu; ?>"> Historial </a>
             </li>
             <li>
-              <a href="carrito.php"> Carrito de compras </a>
+              <a href="carrito.php?idusu=<?php echo $idusu; ?>"> Carrito de compras </a>
             </li>
             <li>
 
@@ -44,13 +44,13 @@
         </nav>
 
         <center>
-            <form id="card-form">
+            <form id="card-form" action = "ejecutarcompra.php">
                 
                             <div class="card">
                     <div class="card-header">
                         <div class="row display-tr">
                             <br/><br/><br/><h3><H1>PAGO EN LÍNEA</H1></h3>
-                                <link rel="stylesheet" type="text/css" href="estcompra.css"
+                                <link rel="stylesheet" type="text/css" href="estcompra.css">
 
                         </div>
                     </div>
@@ -114,7 +114,7 @@
             
                 
             </form>
-        <center/>
+      </center>
    
     </body>
 </html>
