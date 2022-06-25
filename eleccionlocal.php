@@ -1,4 +1,5 @@
-<?php require_once 'db.php';
+<?php require_once 'conexion.php';
+      require_once 'iniciosesion.php';
 //Llamamos a los pedidos
 ?>
 
@@ -19,7 +20,7 @@
       <!--Cabecera -->
       <header id="cabecera">
         <div id="logo">
-          <a href="eleccionlocal.php">
+            <a href="portada2.php?idusu=<?php echo $idusu; ?>">
             <h1> ElectroShop </h1>
           </a>
         </div>
@@ -32,28 +33,23 @@
               <a href="cerrar.php"> Cerrar Sesión </a>
             </li>
             <li>
-              <a href="historial.php"> Historial </a>
+              <a href="historial.php?idusu=<?php echo $idusu; ?>"> Historial </a>
             </li>
             <li>
-              <a href="carrito.php"> Carrito de compras </a>
-            </li>
-            <li>
-              <a href="sesion.php"> VALERIAAAAAAAAAA </a>
-
-            </li>
-            <li>
-              <a href="portada.php"> Inicio </a>
+              <a href="portada2.php?idusu=<?php echo $idusu; ?>"> <?php $name = $row['CI_Nombre']; echo $name; ?> </a>
             </li>
           </ul>
         </nav>
         <div id= "buscador" class="bloque" >
           <h3> </h3>
-          <center>
-          <form action= "buscador.php" method="POST">
-            <input type= "text" name= "busqueda" />
-            <input type= "submit" value= "Buscar" />
-          </form>
-          </center>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
 <!----------CREACION DE LA TABLA----------->
 
@@ -74,7 +70,6 @@
             $consult = "SELECT * FROM locales";
             $result = mysqli_query($db, $consult);
             $local = mysqli_fetch_array($result);
-            $c = 1;
 
             if ($result = mysqli_query($db, $consult)) {
                 while ($local = mysqli_fetch_array($result)) {
@@ -89,9 +84,10 @@
 
       <!-- EN ESTE ULTIMO SE DEBE DE COLOCAR EL BOTÓN PARA SELECCIONAR -->
       
-      <td>BTON</td>
+      <td>
+            <a href="Compra.php?id=<?php echo $local['id_Locales'].'&idusu='.$idusu?>">Seleccionar</a>
+      </td>
       <?php
-            $c = $c + 1;
                 }
             }
             ?>
